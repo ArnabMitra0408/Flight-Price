@@ -1,0 +1,25 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/data_load.py --config_file_path=params.yaml
+    deps:
+    - path: src/data_load.py
+      hash: md5
+      md5: 94f4a49d12f1d708ba98a6256369c2db
+      size: 1325
+    - path: src/utils/common_utils.py
+      hash: md5
+      md5: 2140a3f84a7335980c7db48ca2f91a42
+      size: 882
+    params:
+      params.yaml:
+        artifacts.artifacts_dir: artifacts
+        artifacts.raw_local_data: artifacts/raw/Flight_Data.csv
+        artifacts.raw_local_data_dir: artifacts/raw
+        data.gdrive: 
+          https://drive.google.com/file/d/1IsHFYDq0HG4QYaxvdpnvu6EPdY9zDqM_/view?usp=sharing
+    outs:
+    - path: artifacts/raw/Flight_Data.csv
+      hash: md5
+      md5: 3155f71c567752e38f24f887ce0c4ef8
+      size: 72970

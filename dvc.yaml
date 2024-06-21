@@ -1,0 +1,15 @@
+stages:
+  load_data:
+    cmd: python src/data_load.py --config_file_path=params.yaml
+    deps:
+      - src/utils/common_utils.py
+      - src/data_load.py
+    params:
+      - data.gdrive
+      - artifacts.artifacts_dir
+      - artifacts.raw_local_data_dir
+      - artifacts.raw_local_data
+    outs:
+      - artifacts/raw/Flight_Data.csv
+
+    

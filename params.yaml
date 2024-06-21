@@ -1,0 +1,11 @@
+base:
+  project: flight-price-prediction
+  random_state: 42
+  target_col: totalFare
+  test_size: 0.2
+data:
+  gdrive: https://drive.google.com/file/d/1IsHFYDq0HG4QYaxvdpnvu6EPdY9zDqM_/view?usp=sharing
+artifacts:
+  artifacts_dir: artifacts
+  raw_local_data_dir: artifacts/raw
+  raw_local_data: artifacts/raw/Flight_Data.csv
